@@ -9,7 +9,7 @@
 
   <script type="text/javascript">
   	
-	var socket = io.connect('http://localhost:8080');
+	var socket = io.connect(location.host);
 	socket.on('msg', function (data) {
 		console.log(data);
 		// socket.emit('client acknowledge', { msg: 'client heard from server' });

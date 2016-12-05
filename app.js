@@ -17,7 +17,7 @@ oscServer.on('message', function(msg, rinfo) {
   // console.log(msg.length);
   console.log(msg);
   connectedSockets.forEach(function(s){
-    s.emit("skeleton", msg);
+    s.emit("msg", msg);
   });
 });
 

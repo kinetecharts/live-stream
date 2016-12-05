@@ -5,13 +5,15 @@
   </head>   
   <body>
 	<script src="/socket.io/socket.io.js"></script>
-  test abcd
+	<script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+  <div id="msg">msg</div>
 
   <script type="text/javascript">
   	
 	var socket = io.connect(location.host);
 	socket.on('msg', function (data) {
 		console.log(data);
+		$('#msg').text(data)
 		// socket.emit('client acknowledge', { msg: 'client heard from server' });
 	});
 
